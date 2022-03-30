@@ -1,0 +1,63 @@
+/* * Header
+   * lado esquerdo e direito
+*/
+.header{
+    background-color: white;
+    padding: 10px 0;
+    display: flex;
+}
+.headerLeft{
+    width: 50%;
+    flex-direction: row;
+    display: flex;
+}
+.logo-fb svg{
+    color: #4287f5;
+    font-size: 40px;
+    margin: 0 10px;
+}
+.search-fb{
+    background-color: rgb(230,230,230);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+}
+.search-fb svg{
+    color: gray;
+    font-size: 15px;
+}
+.menu-fb{
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    margin-left: 25px;
+    position: relative;
+    padding: 10px 8px 8px 10px;
+    border-radius: 50%;
+}
+.menu-fb:hover{
+    background-color: rgb(230,230,230);
+    transition: .2s;
+}
+.menu-fb svg{
+    color: gray;
+    font-size: 20px;
+}
+.headerRight{
+    width: 50%;
+    text-align: right;
+    margin: 0 20px;
+}
+.plusBtn{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 20px;
+    background-color: rgb(230,230,230);
+    text-align: center;
+    line-height: 34px;
+    font-size: 28px;
+    cursor: pointer;
+}
