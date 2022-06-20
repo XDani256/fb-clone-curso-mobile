@@ -1,0 +1,38 @@
+.feedPostSingle{
+    margin: 20px 0;
+    background-color: white;
+}
+
+.feedPostProfile{
+    padding: 10px 10px 0;
+}
+.feedPostProfile img{
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.feedPostProfile span{
+    padding-left: 10px;
+
+    display: inline-block;
+    vertical-align: middle;
+}
+.feedPostProfile a{
+    font-size: 15px;
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+}
+.feedPostProfile p {
+    font-size: 14px;
+}
+
+.feedPostContent img {
+    width: 100%;
+    display: block;
+}
+.feedPostContent p{
+    margin: 10px 20px;
+}

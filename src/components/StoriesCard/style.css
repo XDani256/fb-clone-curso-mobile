@@ -1,0 +1,21 @@
+.storiesCardSingle{
+  flex: 1;
+  flex-direction: row;
+}
+
+.storiesCard{
+  width:19%;
+  margin-right: 1%;
+  padding-top: 25%;
+  background-position: center;
+  background-size: cover;
+  border-radius:10px;
+  max-width: 140px;
+}
+
+.storiesCard p{
+  color:white;
+  font-size:14px;
+  font-weight: 600;
+  padding:10px;
+}

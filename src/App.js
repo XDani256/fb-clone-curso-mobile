@@ -1,34 +1,43 @@
 import './App.css';
-import { Header } from "./components/Header/Header";
 
-import danki from "./res/danki.jpg";
+/* import libraries */
+import {useState, useEffect} from 'react';
+
+/* import firebase config */
+import { db } from './firebase.js';
+
+/* import components */
+import Header from "./components/Header/Header";
+import Stories from './components/Stories/Stories';
+import FeedForm from './components/FeedForm/FeedForm';
+import Feed from './components/Feed/Feed';
 
 function App() {
+
+  const [posts,setPosts] = useState([]);
+
+  useEffect(()=>{
+    db.collection('fbPosts').onSnapshot(snapshot=>{
+      setPosts(snapshot.docs.map((doc)=>{
+        return {info:doc.data()}
+      }));
+    })
+  },[]);
+
   return (
     <div className="App">
       <Header />
-      <div className='stories'>
-        <div className='storiesCard' style={{backgroundImage: `url(${danki})`}}>
-          <p>Dani P.</p>
-          
-        </div>
-        <div className='storiesCard' style={{backgroundImage: `url(${danki})`}}>
-          <p>Dani P.</p>
-          
-        </div>
-        <div className='storiesCard' style={{backgroundImage: `url(${danki})`}}>
-          <p>Dani P.</p>
-          
-        </div>
-        <div className='storiesCard' style={{backgroundImage: `url(${danki})`}}>
-          <p>Dani P.</p>
-          
-        </div>
-        <div className='storiesCard' style={{backgroundImage: `url(${danki})`}}>
-          <p>Dani P.</p>
-          
-        </div>
-      </div>
+      <Stories />
+      <FeedForm />
+      {
+        posts.map((val)=>{
+            <Feed 
+              name={val.name}
+              hour={val.hour}
+              content={val.content}
+            />
+        })
+      }
     </div>
   );
 }

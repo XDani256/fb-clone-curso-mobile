@@ -2,7 +2,7 @@ import React from "react";
 import { FaFacebook, FaSearch, FaAlignJustify } from "react-icons/fa";
 import "./style.css";
 
-export function Header(){
+function Header(){
     return(
         <div className="header">
             <div className="headerLeft">
@@ -24,3 +24,5 @@ export function Header(){
         </div>
     );
 }
+
+export default Header;

@@ -1,9 +1,16 @@
 import React from "react";
+
+import StoriesCard from "../StoriesCard/StoriesCard";
+
 import "./style.css";
 
-<div className='stories'>
-    <div className='storiesCard' style={{}}>
-        <p>Dani P.</p>
-        
-    </div>
-</div>
+function Stories(){
+
+    return(
+        <div className='stories'>
+            <StoriesCard />
+        </div>
+    );
+}
+
+export default Stories;

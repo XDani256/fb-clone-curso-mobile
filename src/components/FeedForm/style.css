@@ -1,0 +1,78 @@
+.newPost{
+    background-color: white;
+    padding: 10px;
+}
+
+/* top of new post */
+.feedForm{
+    display: flex;
+    padding: 0px 10px 10px;
+    border-bottom: 1px solid rgb(233, 233, 233);
+}
+
+.feedForm img{
+    align-self: center;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.feedForm input{
+    margin-left: 2%;
+    width: calc(98% - 40px);
+    height: 50px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 40px;
+    border-style: none;
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+.feedForm input:focus{
+    outline: 0;
+}
+
+/* bottom of new post*/
+
+.feedContent {
+    padding: 10px 1em 0;
+    display: flex;
+    width: 100%;
+}
+
+.iconSingle{
+    padding: 0.5em 1em 0.5em;
+    background-color: white;
+    border-radius: 10px;
+    width: 33.3%;
+
+    transition: 0.3s;
+
+    text-align: center;
+}
+.iconSingle:hover{
+    transition: 0.3s;
+    background-color: rgb(233, 233, 233);
+}
+.iconSingle:first-child svg{
+    vertical-align: middle;
+    font-size: 25px;
+    color: crimson;
+}
+.iconSingle:nth-child(2) svg{
+    vertical-align: middle;
+    font-size: 25px;
+    color: #45bd62;
+}
+.iconSingle:last-child svg{
+    vertical-align: middle;
+    font-size: 25px;
+    color: #F7B928;
+}
+.iconSingle span{
+    margin-left: 15px;
+    font-weight: bold;
+    color: gray;
+    max-width: fit-content;
+}
